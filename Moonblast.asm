@@ -2,6 +2,7 @@
 ; ------------------------------------------------------------------------------
 ; A template to code your own move effects
 ; By happylappy: Does damage, then a 30% chance to lower special attack by 1 stage!
+; Note: happylappy allowed me to post this to my Repo, but full credits go for them!
 ; ------------------------------------------------------------------------------
 
 
