@@ -37,9 +37,7 @@
 		mov r3,r7
 		bl DoMoveDamageWeightDependent
 		
-		cmp r0,#0
-		movne r10,#1
-		moveq r10,#0
+		movs r10,r0
 		beq return
 		
 		mov r0,r9

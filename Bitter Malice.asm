@@ -62,9 +62,7 @@
 	str r7,[sp,#0]
 	bl  DealDamage
 
-	cmp   r0,#0
-    movne r10,#1
-    moveq r10,#0
+	movs r10,r0
 	beq return_2
 	
 	mov r0,r9
@@ -82,10 +80,8 @@
 	
 	return:
 		
-		cmp r0,#0
-		movne r10,#1
-		moveq r10,#0
-		beq return_2
+		movs r10,r0
+		beq return
 	
 		mov r0, #1
 		str r0,[sp,#0]
