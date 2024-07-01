@@ -27,20 +27,7 @@
 ; File creation
 .create "./code_out.bin", 0x02330134 ; Change to the actual offset as this directive doesn't accept labels
 	.org MoveStartAddress
-	.area MaxSize ; Define the size of the area
-	; Usable Variables: 
-	; r6 = Move ID
-	; r9 = User Monster Structure Pointer
-	; r4 = Target Monster Structure Pointer
-	; r8 = Move Data Structure Pointer (8 bytes: flags [4 bytes], move_id [2 bytes], pp_left [1 byte], boosts [1 byte])
-	; r7 = ID of the item that called this move (0 if the move effect isn't from an item)
-	; Returns: 
-	; r10 (bool) = ???
-	; Registers r4 to r9, r11 and r13 must remain unchanged after the execution of that code
-		
-	.create "./code_out.bin", 0x02330134 ; Change to the actual offset as this directive doesn't accept labels
-    .org MoveStartAddress
-    .area MaxSize ; Define the size of the area
+	.area MaxSize	
     sub sp,sp,#0x8
     
     mov r0,r9
@@ -62,6 +49,6 @@
 	
     add sp,sp,#0x8
 	b MoveJumpAddress
-		.pool
+	.pool
 	.endarea
 .close
