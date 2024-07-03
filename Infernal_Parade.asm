@@ -41,7 +41,7 @@
 	; r10 (bool) = ???
 	; Registers r4 to r9, r11 and r13 must remain unchanged after the execution of that code
 		
-	sub r13,r13,#0x4
+	sub r13,r13,#0x8
 	ldr r0,[r4,#+0xb4]
 	ldrb r1,[r0,#+0xbd]
 	ldrb r2,[r0,#+0xbf]
@@ -62,7 +62,7 @@
 	str r7,[sp,#0]
 	bl  DealDamage
 
-	cmp   r0,#0
+	cmp r0,#0
     movne r10,#1
     moveq r10,#0
 	beq return
@@ -81,7 +81,7 @@
 	bl  TryInflictBurnStatus
 	
 	return:
-		add r13,r13,#0x4
+		add r13,r13,#0x8
 		b MoveJumpAddress
 		.pool
 	.endarea

@@ -42,7 +42,7 @@
 	; Registers r4 to r9, r11 and r13 must remain unchanged after the execution of that code
 	
 	
-	sub sp,sp,#0x4
+	sub sp,sp,#0x8
 	
 	ldr  r0,[r4,#0xb4]
     ldrb r1,[r0,#0xbf]
@@ -60,7 +60,7 @@
 	str r7,[sp,#0]
 	bl  DealDamage
 
-	cmp   r0,#0
+	cmp r0,#0
     movne r10,#1
     moveq r10,#0
 	beq return
@@ -79,7 +79,7 @@
 	bl  TryInflictPoisonedStatus
 	
 	return:
-		add sp,sp,#0x4
+		add sp,sp,#0x8
 		b MoveJumpAddress
 		.pool
 	.endarea
