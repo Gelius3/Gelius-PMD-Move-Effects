@@ -49,22 +49,19 @@
 	cmpne r1,#3
 	cmpne r1,#5
 	moveq r3,#0x200
-	beq DealDamage
+	beq myDamageCalculation
 	cmp r2,#0
 	movne r3,#0x200
 	moveq r3,#0x100
-	
-	str r7,[sp]
-	
+
+myDamageCalculation:
 	mov r0,r9
 	mov r1,r4
 	mov r2,r8
 	str r7,[sp,#0]
 	bl  DealDamage
 
-	cmp r0,#0
-    movne r10,#1
-    moveq r10,#0
+	movs r10,r0
 	beq return
 	
 	mov r0,r9

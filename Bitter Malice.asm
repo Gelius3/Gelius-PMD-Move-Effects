@@ -41,7 +41,7 @@
 	; r10 (bool) = ???
 	; Registers r4 to r9, r11 and r13 must remain unchanged after the execution of that code
 		
-	sub r13,r13,#0x4
+	sub r13,r13,#0x8
 	ldr r0,[r4,#+0xb4]
 	ldrb r1,[r0,#+0xbd]
 	ldrb r2,[r0,#+0xbf]
@@ -49,22 +49,19 @@
 	cmpne r1,#3
 	cmpne r1,#5
 	moveq r3,#0x200
-	beq DealDamage
+	beq myDamageCalculation
 	cmp r2,#0
 	movne r3,#0x200
 	moveq r3,#0x100
-	
-	str r7,[sp]
-	
+
+myDamageCalculation:
 	mov r0,r9
 	mov r1,r4
 	mov r2,r8
 	str r7,[sp,#0]
 	bl  DealDamage
 
-	cmp   r0,#0
-    movne r10,#1
-    moveq r10,#0
+	movs r10,r0
 	beq return_2
 	
 	mov r0,r9
@@ -82,10 +79,8 @@
 	
 	return:
 		
-		cmp   r0,#0
-		movne r10,#1
-		moveq r10,#0
-		beq return
+		movs r10,r0
+		beq return_2
 	
 		mov r0, #1
 		str r0,[sp,#0]
@@ -98,7 +93,7 @@
 		bl LowerOffensiveStat
 		
 		return_2:
-			add r13,r13,#0x4
+			add r13,r13,#0x8
 			b MoveJumpAddress
 			.pool
 	.endarea
