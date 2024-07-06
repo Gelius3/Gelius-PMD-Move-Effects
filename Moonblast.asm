@@ -37,6 +37,10 @@
     mov r3,#0x100
     str r7,[sp,#0]
     bl  DealDamage
+	
+	movs r10,r0
+	beq return
+	
     ; Check randomly
     mov r0,r9
     mov r1,r4
