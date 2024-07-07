@@ -9,6 +9,10 @@ Adex: For certain move effects used as basis for my move effects
 
 Hecka-Bad: For general assistance, and various move effects used as basis for my move effects.
 
+Mond: For assistance in making some of the effects.
+
+Frostbyte: For assitance in making some of the effects.
+
 pmdsky-debug repo: For general information on how to make these.
 
 Sky Temple Discord Server: For general assistance on making these, and tools to edit the rom, which allow me to test the effects myself.
