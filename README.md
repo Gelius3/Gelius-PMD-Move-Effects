@@ -5,7 +5,7 @@ Credits go to:
 
 HappyLappy: For general assistance and for the Moonblast Effect (They made it)
 
-Adex: For certain move effects used as basis for my move effects
+Adex: For certain move effects used as basis for my move effects, as well as general assistance.
 
 Hecka-Bad: For general assistance, and various move effects used as basis for my move effects.
 
