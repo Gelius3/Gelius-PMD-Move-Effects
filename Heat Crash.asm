@@ -17,7 +17,6 @@
 .definelabel MoveStartAddress, 0x02330134
 .definelabel MoveJumpAddress, 0x023326CC
 .definelabel GetWeightMultiplier, 0x20528FC
-.definelabel DealDamage, 0x2332B20
 
 ; For EU
 ;.include "lib/stdlib_eu.asm"
