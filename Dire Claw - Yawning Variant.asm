@@ -27,14 +27,14 @@
 	
 	sub r13,r13,#0x4
 	
-	mov r0,r9
+    mov r0,r9
     mov r1,r4
     mov r2,r8
     mov r3,#0x100
     str r7,[sp,#0]
     bl  DealDamage
 	
-	mov r0,r9
+    mov r0,r9
     mov r1,r4
     mov r2,#50
     bl  DungeonRandOutcomeUserTargetInteraction
