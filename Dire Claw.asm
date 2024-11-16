@@ -34,7 +34,7 @@
     str r7,[sp,#0]
     bl  DealDamage
 	
-	mov r0,r9
+    mov r0,r9
     mov r1,r4
     mov r2,#50
     bl  DungeonRandOutcomeUserTargetInteraction
